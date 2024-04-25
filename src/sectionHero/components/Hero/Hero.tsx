@@ -1,6 +1,6 @@
 import * as styled from "./styles";
 import React from "react";
-import Button from "../Button/Button";
+import Button from "../../../common/components/Button/Button";
 
 interface HeroProps {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ const Hero = ({ children }: HeroProps) => {
 
             <styled.HeroContent>
 
-              <styled.HeroTitle>No seu tempo, no seu controle.</styled.HeroTitle>
+              <styled.HeroTitle>No seu <styled.Bold>tempo</styled.Bold>, no seu <styled.Bold>controle</styled.Bold>.</styled.HeroTitle>
               <styled.HeroSubtitle>Venha transformar sua expêriencia financeira.</styled.HeroSubtitle>
               <Button $width="222px" $height="62px">Abrir Conta</Button>
 

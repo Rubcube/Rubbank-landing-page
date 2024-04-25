@@ -1,27 +1,29 @@
-import styles from "styled-components";
+import styled from "styled-components";
 
-export const HeroContainer = styles.div`
+export const HeroContainer = styled.div`
   height: 840px;
   background-color: #c0c0c0;
   color: ${({ theme }) => theme.colors.white};
 `;
 
-export const HeroBackground = styles.div`
+export const HeroBackground = styled.div`
   background: ${({ theme }) => theme.backgrounds.heroDesktop} no-repeat center;
   height: 840px;
 `;
 
-export const HeroOpacity = styles.div`
-  background: linear-gradient(153.51deg, #6B7AE5 0%, #353A7A 44.64%, #1F2147 100%);
+export const HeroOpacity = styled.div`
+  // background gradient with 3 colors and opacity
+  background: linear-gradient(153.51deg, rgba(107, 122, 229, 0.7) 0%, rgba(53, 58, 122, 0.7) 44.64%, rgba(31, 33, 71, 0.7) 100%);
   background-blend-mode: hard-light;
-  opacity: 0.7;
   height: 840px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const Box = styles.div`
+
+
+export const Box = styled.div`
   max-width: 1366px;
   width: 100%;
   display: flex;
@@ -33,10 +35,10 @@ export const Box = styles.div`
   height: 100%;
 `;
 
-export const HeroContent = styles.div`
+export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 224px;
+  margin-top: 324px;
   width: 100%;
   align-items: left;
   height: 100%;
@@ -44,7 +46,7 @@ export const HeroContent = styles.div`
 `;
 
 
-export const HeroTitle = styles.h1`
+export const HeroTitle = styled.h1`
   font-size: ${({ theme }) => theme.font.sizes.xlarge};
   font-style: normal;
   font-weight: 400;
@@ -52,7 +54,11 @@ export const HeroTitle = styles.h1`
   line-height: 129%;
 `;
 
-export const HeroSubtitle = styles.p`
+export const Bold = styled.span`
+  font-weight: 700;
+`;
+
+export const HeroSubtitle = styled.p`
   font-size: ${({ theme }) => theme.font.sizes.large};
   font-style: normal;
   font-weight: 300;

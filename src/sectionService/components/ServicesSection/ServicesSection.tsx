@@ -1,18 +1,19 @@
 import * as styled from "./styles";
-import Divisor from "../../assets/imgs/divisor.svg";
+import Divisor from "../../../assets/imgs/divisor.svg";
 import ServiceItem from "./ServiceItem";
-import Dollar from "../../assets/imgs/iconsServices/attach_money.svg";
-import Support from "../../assets/imgs/iconsServices/live_help.svg";
-import Allert from "../../assets/imgs/iconsServices/mark_chat_unread.svg";
+import Dollar from "../../../assets/imgs/iconsServices/attach_money.svg";
+import Support from "../../../assets/imgs/iconsServices/live_help.svg";
+import Allert from "../../../assets/imgs/iconsServices/mark_chat_unread.svg";
+import SectionTitle from "../../../common/components/SectionTitle/SectionTitle";
 
 const ServicesSection = () => {
   return (
     <styled.Box>
       <styled.ServicesSections>
 
-        <styled.ServicesTitle>
+        <SectionTitle>
           Nossos Serviços
-        </styled.ServicesTitle>
+        </SectionTitle>
 
 
         <img src={Divisor} alt="Divisor" />

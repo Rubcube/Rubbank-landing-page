@@ -21,16 +21,6 @@ export const ServicesSections = styled.section`
   align-items: center;
 `;
 
-export const ServicesTitle = styled.h1`
-  font-size: ${({ theme }) => theme.font.sizes.medium};
-  color: ${({ theme }) => theme.colors.primaryColor};
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  line-height: 129%;
-  text-transform: uppercase;
-`;
-
 export const ServicesDescription = styled.p`
   width: 80%;
   font-style: normal;

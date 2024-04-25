@@ -1,11 +1,31 @@
 import styled from 'styled-components';
 
-export const NavbarContainer = styled.nav`
+export const NavbarContainer = styled.nav<{ scrolled: boolean }>`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${({ theme }) => theme.spacings.small} 0;
+  // fix on top
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  // change background color when scroll
+  ${({ scrolled, theme }) => scrolled && `
+    background-color: rgb(53, 58, 122, 0.7);
+  `}
+  transition: background-color 0.5s;
+`;
+
+export const Box = styled.div`
+  max-width: 1366px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: ${({ theme }) => theme.spacings.xsmall} ${({ theme }) => theme.spacings.large};
 `;
 
 export const NavbarMenu = styled.ul`

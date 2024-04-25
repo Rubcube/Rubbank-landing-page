@@ -1,5 +1,7 @@
 import heroMobile from '../assets/imgs/background-hero/hero-mobile.png';
 import heroDesktop from '../assets/imgs/background-hero/hero-desktop-v2.png';
+import createAccount from '../assets/imgs/background-createAcount/mosaic-background.jpg';
+import { create } from 'domain';
 
 export const theme = {
   colors: {
@@ -12,8 +14,8 @@ export const theme = {
     background: '#FFFFFF',
     mediumGray: '#F4F4F4',
     textLightGray: '#858585',
-    textDarkGray: '#808080'
-
+    textDarkGray: '#808080',
+    borderColor: '#E4E4E4',
   },
   font: {
     family: {
@@ -33,7 +35,7 @@ export const theme = {
     lteMedium: '(max-width: 768px)',
   },
   spacings: {
-    xsmall: '8rem',
+    xsmall: '0.8rem',
     small: '1.6rem',
     medium: '2.4rem',
     large: '3.2rem',
@@ -45,5 +47,6 @@ export const theme = {
   backgrounds: {
     heroMobile: `url(${heroMobile})`,
     heroDesktop: `url(${heroDesktop})`,
+    createAccount: `url(${createAccount})`,
   },
 };
