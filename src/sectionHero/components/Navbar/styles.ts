@@ -12,9 +12,22 @@ export const NavbarContainer = styled.nav<{ scrolled: boolean }>`
 
   // change background color when scroll
   ${({ scrolled, theme }) => scrolled && `
-    background-color: rgb(53, 58, 122, 0.7);
+    background-color: rgb(53, 58, 122, 0.9);
   `}
   transition: background-color 0.5s;
+
+  @media (max-width: 1048px) {
+    background-color: rgb(53, 58, 122);
+
+    // display none in the button and the menu links
+    > div > button {
+      display: none;
+    }
+
+    > div > ul {
+      display: none;
+    }
+  }
 `;
 
 export const Box = styled.div`
@@ -28,9 +41,21 @@ export const Box = styled.div`
   padding: ${({ theme }) => theme.spacings.xsmall} ${({ theme }) => theme.spacings.large};
 `;
 
+export const NavbarDisplayNone = styled.div`
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1048px) {
+    display: none;
+  }
+`;
+
 export const NavbarMenu = styled.ul`
   display: flex;
   list-style: none;
+  margin-inline: 10px;
+  align-items: center;
 `;
 
 export const NavbarMenuItem = styled.li`
@@ -65,16 +90,11 @@ export const NavbarLink = styled.a`
   }
 `;
 
-export const NavbarButton = styled.button`
-  padding: 0.5rem 1rem;
-  background-color: ${({ theme }) => theme.colors.white};
-  border: 1px solid white;
-  color: ${({ theme }) => theme.colors.primaryColor};
-  font-weight: medium;
-  border-radius: 5px;
-  cursor: pointer;
-`;
-
 export const NavbarLogo = styled.img`
   width: 200px;
+
+  @media (max-width: 412px) {
+    max-width: 191px;
+    width: 100%;
+  }
 `;

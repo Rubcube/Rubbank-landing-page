@@ -8,7 +8,7 @@ import EstadLogo from '../../../assets/imgs/logos/logos-news/logo-estadao.webp';
 const NewsSection = () => {
   return (
     <styled.Box>
-        <styled.NewsSection>
+        <styled.NewsSection id='news'>
 
           <SectionTitle>O que dizem sobre nós</SectionTitle>
 

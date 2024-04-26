@@ -15,6 +15,10 @@ export const Box = styled.div`
   align-items: center;
   height: 100%;
   margin: 0 auto;
+
+  @media (max-width: 500px) {
+    padding: 0 ${({ theme }) => theme.spacings.medium};
+  }
 `;
 
 export const PartnersSection = styled.section`
@@ -48,6 +52,7 @@ export const PartnersCard = styled.div`
   transition: all 0.5s ease-in-out;
   background-color: ${({ theme }) => theme.colors.primaryColor};
   border-radius: 8px;
+  box-sizing: border-box;
 
   &:hover {
     cursor: pointer;
@@ -58,4 +63,8 @@ export const PartnersCard = styled.div`
 export const PartnersImage = styled.img`
   width: 100%;
   max-width: 300px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;

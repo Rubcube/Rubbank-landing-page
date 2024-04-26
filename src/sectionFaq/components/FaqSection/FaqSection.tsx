@@ -8,7 +8,7 @@ import { useState } from 'react';
 const FaqSection = () => {
   return (
     <styled.Box>
-        <styled.FaqSection>
+        <styled.FaqSection id='faq'>
 
           <SectionTitle>Perguntas Frequentes</SectionTitle>
 

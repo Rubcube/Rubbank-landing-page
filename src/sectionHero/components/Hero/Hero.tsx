@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero = ({ children }: HeroProps) => {
   return (
-    <styled.HeroContainer>
+    <styled.HeroContainer id="hero">
       <styled.HeroBackground>
         <styled.HeroOpacity>
 

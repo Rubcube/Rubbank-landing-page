@@ -11,14 +11,20 @@ export const Box = styled.div`
   align-items: center;
   height: 100%;
   margin: 0 auto;
+
+  @media (max-width: 500px){
+    padding: 0 ${({ theme }) => theme.spacings.small};
+  }
 `;
 
 export const ServicesSections = styled.section`
   padding: 32px 0;
   gap: 32px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 `;
 
 export const ServicesDescription = styled.p`
@@ -30,6 +36,10 @@ export const ServicesDescription = styled.p`
   text-align: center;
   letter-spacing: 0.09em;
   color: ${({ theme }) => theme.colors.textLightGray};
+
+  @media (max-width: 500px){
+    width: 100%;
+  }
 `;
 
 export const ServicesItems = styled.div`
@@ -70,6 +80,10 @@ export const ServicesItemTitle = styled.h2`
   font-weight: 500;
   letter-spacing: 0.05em;
   line-height: 129%;
+
+  @media (max-width: 500px){
+    font-size: ${({ theme }) => theme.font.sizes.small};
+  }
 `;
 
 export const ServicesItemDescription = styled.p`
@@ -80,6 +94,10 @@ export const ServicesItemDescription = styled.p`
   letter-spacing: 0.09em;
   color: ${({ theme }) => theme.colors.textLightGray};
   text-align: center;
+
+  @media (max-width: 500px){
+    font-size: ${({ theme }) => theme.font.sizes.small};
+  }
 `;
 
 

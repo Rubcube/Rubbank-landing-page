@@ -9,7 +9,7 @@ import SectionTitle from "../../../common/components/SectionTitle/SectionTitle";
 const ServicesSection = () => {
   return (
     <styled.Box>
-      <styled.ServicesSections>
+      <styled.ServicesSections id="services">
 
         <SectionTitle>
           Nossos Serviços

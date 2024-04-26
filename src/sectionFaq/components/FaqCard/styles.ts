@@ -14,11 +14,12 @@ export const FaqCard = styled.div`
   border-radius: 8px;
 `;
 
-export const FaqQuestion = styled.h3`
+export const FaqQuestion = styled.p`
   font-size: ${({ theme }) => theme.font.sizes.small};
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   padding: 16px;
+  gap: 16px;
   color: ${({ theme }) => theme.colors.textDarkGray};
   background-color: #f4f4f4;
   display: flex;
@@ -32,7 +33,7 @@ export const FaqQuestion = styled.h3`
 
 
 export const FaqQuestionContent = styled.span`
-  width: 90%;
+  font-size: ${({ theme }) => theme.font.sizes.small};
 `;
 
 export const FaqIcon = styled.span`

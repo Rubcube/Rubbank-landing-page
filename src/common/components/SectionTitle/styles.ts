@@ -8,4 +8,9 @@ export const SectionTitle = styled.h1`
   letter-spacing: 0.05em;
   line-height: 129%;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: 500px){
+    font-size: ${({ theme }) => theme.font.sizes.large};
+  }
 `;

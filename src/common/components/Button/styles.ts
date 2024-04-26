@@ -35,6 +35,9 @@ export const Button = styles.button<{ $width?: string,  $height?: string, $fontS
     color: ${({ theme }) => theme.colors.white};
     cursor: pointer;
   }
+
+  @media (max-width: 500px) {
+    font-size: ${({ theme }) => theme.font.sizes.medium};
 `;
 
 

@@ -11,6 +11,10 @@ export const Box = styled.div`
   align-items: center;
   height: 100%;
   margin: 0 auto;
+
+  @media (max-width: 500px) {
+    padding: 0 ${({ theme }) => theme.spacings.medium};
+  }
 `;
 
 export const FaqSection = styled.section`

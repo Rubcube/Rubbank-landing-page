@@ -8,7 +8,7 @@ const PartnersSection = () => {
   return (
     <styled.Background>
       <styled.Box>
-        <styled.PartnersSection>
+        <styled.PartnersSection id="partners">
           <SectionTitle>Parceiros</SectionTitle>
 
           <img src={Divisor} alt="Divisor" />

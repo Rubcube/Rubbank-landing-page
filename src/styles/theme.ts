@@ -1,7 +1,6 @@
-import heroMobile from '../assets/imgs/background-hero/hero-mobile.png';
+import heroMobile from '../assets/imgs/background-hero/hero-mobile.svg';
 import heroDesktop from '../assets/imgs/background-hero/hero-desktop-v2.png';
 import createAccount from '../assets/imgs/background-createAcount/mosaic-background.jpg';
-import { create } from 'domain';
 
 export const theme = {
   colors: {

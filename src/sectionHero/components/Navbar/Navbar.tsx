@@ -2,6 +2,7 @@ import * as styled from "./styles";
 import logo from "../../../assets/imgs/logos/bank-factory-eliptical-color.svg";
 import Button from "../../../common/components/Button/Button";
 import { useCallback, useEffect, useState } from "react";
+import MobileNavbar from "../MobileNavbar/MobileNavbar";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,6 +21,11 @@ const Navbar = () => {
       };
   }, [handleScroll]);
 
+  const scrollToSection = (sectionId : string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
   return (
     <styled.NavbarContainer scrolled={scrolled}>
 
@@ -27,31 +33,34 @@ const Navbar = () => {
 
         <styled.NavbarLogo src={logo} alt="Logo" />
 
-        <styled.NavbarMenu>
+          <styled.NavbarMenu >
 
-          <styled.NavbarMenuItem>
-            <styled.NavbarLink href="#home">Home</styled.NavbarLink>
-          </styled.NavbarMenuItem>
+            <styled.NavbarMenuItem>
+              <styled.NavbarLink onClick={() => scrollToSection('hero')}>Home</styled.NavbarLink>
+            </styled.NavbarMenuItem>
 
-          <styled.NavbarMenuItem>
-            <styled.NavbarLink href="#services">Serviços</styled.NavbarLink>
-          </styled.NavbarMenuItem>
+            <styled.NavbarMenuItem>
+              <styled.NavbarLink onClick={() => scrollToSection('services')}>Serviços</styled.NavbarLink>
+            </styled.NavbarMenuItem>
 
-          <styled.NavbarMenuItem>
-            <styled.NavbarLink href="#about">Parceiros</styled.NavbarLink>
-          </styled.NavbarMenuItem>
+            <styled.NavbarMenuItem>
+              <styled.NavbarLink onClick={() => scrollToSection('partners')}>Parceiros</styled.NavbarLink>
+            </styled.NavbarMenuItem>
 
-          <styled.NavbarMenuItem>
-            <styled.NavbarLink href="#contact">Notícias</styled.NavbarLink>
-          </styled.NavbarMenuItem>
+            <styled.NavbarMenuItem>
+              <styled.NavbarLink onClick={() => scrollToSection('news')}>Notícias</styled.NavbarLink>
+            </styled.NavbarMenuItem>
 
-          <styled.NavbarMenuItem>
-            <styled.NavbarLink href="#contact">Dúvidas</styled.NavbarLink>
-          </styled.NavbarMenuItem>
+            <styled.NavbarMenuItem>
+              <styled.NavbarLink onClick={() => scrollToSection('faq')}>Dúvidas</styled.NavbarLink>
+            </styled.NavbarMenuItem>
 
-        </styled.NavbarMenu>
+          </styled.NavbarMenu>
 
-        <Button $width="180px" $height="40px" $fontSize="1rem">Abrir Conta</Button>
+          <Button $width="180px" $height="40px" $fontSize="1rem">Abrir Conta</Button>
+
+        <MobileNavbar />
+
       </styled.Box>
     </styled.NavbarContainer>
   );

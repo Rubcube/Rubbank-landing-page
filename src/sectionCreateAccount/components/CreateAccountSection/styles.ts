@@ -41,5 +41,9 @@ export const CreateAccountTitle = styled.h2`
   line-height: 129%;
   text-align: center;
   width: 50%;
+
+  @media (max-width: 500px){
+    width: 90%;
+  }
 `;
 
